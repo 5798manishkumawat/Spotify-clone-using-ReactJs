@@ -1,0 +1,51 @@
+import React from "react";
+import "./Footer.css";
+import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
+import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
+import SkipNextIcon from "@material-ui/icons/SkipNext";
+import ShuffleIcon from "@material-ui/icons/Shuffle";
+import RepeatIcon from "@material-ui/icons/Repeat";
+import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
+import VolumeDownIcon from "@material-ui/icons/VolumeDown";
+import { Grid, Slider } from "@material-ui/core";
+
+function Footer() {
+	return (
+		<div className="footer">
+			<div className="footer_left">
+				<img
+					className="footer_albumLogo"
+					src="data:image/jpeg;base64,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"
+					alt=""
+				/>
+
+				<div className="footer_songInfo">
+					<h4>Yeah!</h4>
+					<p>Usher</p>
+				</div>
+			</div>
+			<div className="footer_center">
+				<ShuffleIcon className="footer_green" />
+				<SkipPreviousIcon className="footer_icon" />
+				<PlayCircleOutlineIcon fontSize="large" className="footer_icon" />
+				<SkipNextIcon className="footer_icon" />
+				<RepeatIcon className="footer_green" />
+			</div>
+			<div className="footer_right">
+				<Grid container spacing={2}>
+					<Grid item>
+						<PlaylistPlayIcon />
+					</Grid>
+					<Grid item>
+						<VolumeDownIcon />
+					</Grid>
+					<Grid item xs>
+						<Slider />
+					</Grid>
+				</Grid>
+			</div>
+		</div>
+	);
+}
+
+export default Footer;
